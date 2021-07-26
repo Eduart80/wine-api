@@ -1,0 +1,31 @@
+{
+  "name": "wine-api",
+  "version": "1.0.0",
+  "description": "wine API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduart80/wine-api.git"
+  },
+  "keywords": [
+    "wine",
+    "API"
+  ],
+  "author": "Eduart Zina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduart80/wine-api/issues"
+  },
+  "homepage": "https://github.com/Eduart80/wine-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
+}

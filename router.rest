@@ -1,0 +1,41 @@
+GET http://localhost:3000/inventory
+
+################################
+
+GET http://localhost:3000/inventory/
+
+###
+
+POST http://localhost:3000/inventory
+Content-Type: application/json
+
+{
+    "name" : "Amator",
+    "wine":"White",
+    "year" : "2011",
+    "origine": "Tirane"
+}
+
+#######
+DELETE http://localhost:3000/inventory/
+
+#######
+
+PATCH http://localhost:3000/inventory/
+Content-Type: application/json
+
+{
+    "name" : "Arti"
+}
+
+##########
+
+PUT http://localhost:3000/inventory/
+Content-Type: application/json
+
+{
+    "name" : "1",
+    "wine" : "2",
+    "year" : "3"
+    "origine" : "4"
+}
