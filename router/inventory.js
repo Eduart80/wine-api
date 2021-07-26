@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const InventorySchema = require("../model/inventoryModel");
+const findId = require("../model/find")
 
-//GET all
+//GET all /////////////////////////////
 router.get("/", async (req, res) => {
   try {
     const inventory = await InventorySchema.find();
@@ -11,11 +12,14 @@ router.get("/", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-//GET one
+//GET one //////////////////////////////
 router.get("/:id", getInventory, (req, res) => {
+  if (req.body.id != null) {
+    res.inventory.name = req.body.name;
+  }
   res.json(res.inventory);
 });
-// POST one
+// POST one //////////////////////////////////////
 router.post("/", async (req, res) => {
   const inventory = new InventorySchema({
     name: req.body.name,
@@ -30,11 +34,20 @@ router.post("/", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-//PATCH by id
+//PATCH by id ///////////////////
 router.patch("/:id", getInventory, async (req, res) => {
   if (req.body.name != null) {
     res.inventory.name = req.body.name;
-  }
+   }
+   if (req.body.wine != null) {
+     res.inventory.wine = req.body.wine;
+   }
+   if (req.body.year != null) {
+     res.inventory.year = req.body.year;
+   }
+   if (req.body.origine != null) {
+     res.inventory.origine = req.body.origine;
+   }
   try {
     const updatedInventory = await res.inventory.save();
     res.json(updatedInventory);
@@ -42,26 +55,20 @@ router.patch("/:id", getInventory, async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-//PUT one by id
+//PUT one by id //////////////////////////
 router.put("/:id", getInventory, async (req, res) => {
-  try {
-    if (req.body.name != null) {
-      res.inventory.name = req.body.name;
-    }
-    if (req.body.wine != null) {
-      res.inventory.wine = req.body.wine;
-    }
-    if (req.body.name != null) {
-      res.inventory.year = req.body.year;
-    }
-
+  
+  if (req.body.name != null) {
+    res.inventory.name = req.body.name;
+   }
+    try {
     const updateInventory = await res.inventory.save();
     res.status(201).json(updateInventory);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
 });
-//DELETE one
+//DELETE one //////////////////////////////
 router.delete("/:id", getInventory, async (req, res) => {
   try {
     await res.inventory.remove();
@@ -70,7 +77,7 @@ router.delete("/:id", getInventory, async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-
+////////////////////////////////////////////
 async function getInventory(req, res, next) {
   let inventory;
   try {

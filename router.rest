@@ -2,11 +2,11 @@ GET http://localhost:3000/inventory
 
 ################################
 
-GET http://localhost:3000/inventory/
+GET http://localhost:3000/inventory/60fe51fc631ff30b24d5e349
 
 ###
 
-POST http://localhost:3000/inventory
+POST http://localhost:3000/inventory/
 Content-Type: application/json
 
 {
@@ -17,25 +17,25 @@ Content-Type: application/json
 }
 
 #######
-DELETE http://localhost:3000/inventory/
+DELETE http://localhost:3000/inventory/60fee125990ef24928163bda
 
 #######
 
-PATCH http://localhost:3000/inventory/
+PATCH http://localhost:3000/inventory/60fe51e4631ff30b24d5e347
 Content-Type: application/json
 
 {
-    "name" : "Arti"
+    "year" : "3"
 }
 
 ##########
 
-PUT http://localhost:3000/inventory/
+PUT http://localhost:3000/inventory/60fe51e4631ff30b24d5e347
 Content-Type: application/json
 
 {
     "name" : "1",
     "wine" : "2",
-    "year" : "3"
+    "year" : "3",
     "origine" : "4"
 }
