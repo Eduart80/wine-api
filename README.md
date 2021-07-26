@@ -1,6 +1,6 @@
 
 Wine API.
-Built with Node.Js JavaScript Express MongoDB 
+Built with Node.Js JavaScript Express MongoDB Mongoose
 
 Field request cover :
 GET / POST / PUT / PATCH / DELETE
