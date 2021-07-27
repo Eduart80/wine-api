@@ -11,13 +11,13 @@ Content-Type: application/json
 
 {
     "name" : "Amator",
-    "wine":"White",
+    "wine":"RED",
     "year" : "2011",
     "origine": "Tirane"
 }
 
 #######
-DELETE http://localhost:3000/inventory/60fee125990ef24928163bda
+DELETE http://localhost:3000/inventory/60ff52a94bc38c3dc07ef5d6
 
 #######
 
@@ -25,17 +25,16 @@ PATCH http://localhost:3000/inventory/60fe51e4631ff30b24d5e347
 Content-Type: application/json
 
 {
-    "year" : "3"
+    "year" : 1234
 }
 
 ##########
 
-PUT http://localhost:3000/inventory/60fe51e4631ff30b24d5e347
-Content-Type: application/json
+PUT http://localhost:3000/inventory/60ff62efdd6f6947109a83ee
 
 {
-    "name" : "1",
-    "wine" : "2",
-    "year" : "3",
-    "origine" : "4"
+    "name" : "Vodka",
+    "wine" : "red",
+    "year" : 2000,
+    "origine" : "tiron"
 }

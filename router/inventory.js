@@ -38,16 +38,16 @@ router.post("/", async (req, res) => {
 router.patch("/:id", getInventory, async (req, res) => {
   if (req.body.name != null) {
     res.inventory.name = req.body.name;
-   }
-   if (req.body.wine != null) {
-     res.inventory.wine = req.body.wine;
-   }
-   if (req.body.year != null) {
-     res.inventory.year = req.body.year;
-   }
-   if (req.body.origine != null) {
-     res.inventory.origine = req.body.origine;
-   }
+  }
+  if (req.body.wine != null) {
+    res.inventory.wine = req.body.wine;
+  }
+  if (req.body.year != null) {
+    res.inventory.year = req.body.year;
+  }
+  if (req.body.origine != null) {
+    res.inventory.origine = req.body.origine;
+  }
   try {
     const updatedInventory = await res.inventory.save();
     res.json(updatedInventory);
@@ -55,19 +55,7 @@ router.patch("/:id", getInventory, async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-//PUT one by id //////////////////////////
-router.put("/:id", getInventory, async (req, res) => {
-  
-  if (req.body.name != null) {
-    res.inventory.name = req.body.name;
-   }
-    try {
-    const updateInventory = await res.inventory.save();
-    res.status(201).json(updateInventory);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-});
+
 //DELETE one //////////////////////////////
 router.delete("/:id", getInventory, async (req, res) => {
   try {

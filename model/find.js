@@ -1,6 +1,6 @@
 const express = require("express");
 
-async function entryID(req, res, next) {
+async function entryID(req, res) {
   if (req.body.name != null) {
     res.inventory.name = req.body.name;
   }
