@@ -1,9 +1,11 @@
 
 Wine API.
-Built with Node.Js JavaScript Express MongoDB Mongoose
+Built with Node.Js JavaScript Express MongoDB Mongoose,
+
+Automation tests using Mocha Chai Babel Mochawesome
 
 Field request cover :
-GET / POST / PUT / PATCH / DELETE
+GET / POST / PATCH / DELETE
 
 Name of the Wine, 
 Type of it- red/white, 
