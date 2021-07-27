@@ -14,3 +14,25 @@ city or place of production,
       price,
       bottle quantity ( milliliter), 
 auto entry date of adding this product to the server
+
+to do
+schema
+pagination {
+  total
+  page
+  limit
+},
+data[
+{
+  id of 1
+},
+{
+  id of 2
+}, 
+{
+  id of 3
+},
+{
+  etc
+}
+]

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const InventorySchema = require("../model/inventoryModel");
-const findId = require("../model/find")
+
 
 //GET all /////////////////////////////
 router.get("/", async (req, res) => {
