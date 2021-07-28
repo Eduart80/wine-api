@@ -2,7 +2,7 @@ GET http://localhost:3000/inventory
 
 ################################
 
-GET http://localhost:3000/inventory/60fe51fc631ff30b24d5e349
+GET http://localhost:3000/inventory/60ff8fb530aca20da48ed61e
 
 ###
 
@@ -12,16 +12,16 @@ Content-Type: application/json
 {
     "name" : "Amator",
     "wine":"RED",
-    "year" : "2011",
+    "year" : 2011,
     "origine": "Tirane"
 }
 
 #######
-DELETE http://localhost:3000/inventory/60ff52a94bc38c3dc07ef5d6
+DELETE http://localhost:3000/inventory/60ff9c42375d983e783b3a3b
 
 #######
 
-PATCH http://localhost:3000/inventory/60fe51e4631ff30b24d5e347
+PATCH http://localhost:3000/inventory/60ff9c42375d983e783b3a3b
 Content-Type: application/json
 
 {
@@ -29,12 +29,3 @@ Content-Type: application/json
 }
 
 ##########
-
-PUT http://localhost:3000/inventory/60ff62efdd6f6947109a83ee
-
-{
-    "name" : "Vodka",
-    "wine" : "red",
-    "year" : 2000,
-    "origine" : "tiron"
-}

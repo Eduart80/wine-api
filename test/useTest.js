@@ -5,7 +5,7 @@ const { expect } = require("chai");
 const request = supertest("http://localhost:3000");
 const TOKEN = process.env.TOKEN;
 
-describe("Wine API-test", () => {
+describe("Positive API-test", () => {
   let sampleId;
   it("POST /inventory", () => {
     const data = {
@@ -20,7 +20,6 @@ describe("Wine API-test", () => {
       .then((res) => {
         expect(res.body.name).to.be.eq(res.body.name);
         sampleId = res.body._id;
-        console.log(res.body);
       });
   });
 
