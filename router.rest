@@ -10,7 +10,7 @@ POST http://localhost:3000/inventory/
 Content-Type: application/json
 
 {
-    "name" : "Amator",
+    "name" : "Amato",
     "wine":"RED",
     "year" : 2011,
     "origine": "Tirane"
