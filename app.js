@@ -20,5 +20,5 @@ app.use("/inventory", wineRouter);
 
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+  console.log(`Server started on http://localhost:${PORT}`);
 });
